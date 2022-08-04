@@ -1,11 +1,10 @@
-package org.canonymous.chat.services;
+package org.canonymous.chat.persistence.dao;
 
-import org.canonymous.chat.command.dto.RoomDto;
 import org.canonymous.chat.persistence.model.Room;
 
 import java.util.List;
 
-public interface RoomService {
+public interface Dao {
 
     Room get(Integer id);
 
@@ -15,6 +14,5 @@ public interface RoomService {
 
     List<Room> listRooms();
 
-
-
 }
+

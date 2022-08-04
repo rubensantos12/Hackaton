@@ -1,15 +1,17 @@
 package org.canonymous.chat.services;
 
-import org.canonymous.chat.command.dto.RoomDto;
+import org.canonymous.chat.persistence.dao.jpa.RoomDao;
+import org.canonymous.chat.persistence.model.Room;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
 public class RoomServiceImpl implements RoomService{
 
-    RoomDao roomDao;
+    private RoomDao roomDao;
 
-
-
+    @Autowired
     public void setRoomDao(RoomDao roomDao) {
         this.roomDao = roomDao;
     }
@@ -17,24 +19,26 @@ public class RoomServiceImpl implements RoomService{
     public RoomDao getRoomDao() {
         return roomDao;
     }
-
+    @Transactional
     @Override
     public Room get(Integer id) {
-        return null;
+        return roomDao.get(id);
     }
-
+    @Transactional
     @Override
     public Room save(Room room) {
-        return null;
+        return roomDao.save(room);
     }
 
+    @Transactional
     @Override
-    public void delete(Room room) {
-
+    public void delete(int id) {
+        roomDao.delete(id);
     }
+
 
     @Override
     public List<Room> listRooms() {
-        return null;
+        return roomDao.listRooms();
     }
 }
