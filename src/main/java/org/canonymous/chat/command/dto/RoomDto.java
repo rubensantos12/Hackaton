@@ -4,7 +4,6 @@ import com.sun.istack.internal.NotNull;
 
 public class RoomDto {
 
-
     private int id;
 
     @NotNull
