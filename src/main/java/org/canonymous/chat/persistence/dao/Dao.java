@@ -1,18 +1,19 @@
 package org.canonymous.chat.persistence.dao;
 
+import org.canonymous.chat.persistence.model.Model;
 import org.canonymous.chat.persistence.model.Room;
 
 import java.util.List;
 
-public interface Dao {
+public interface Dao<T extends Model> {
 
-    Room get(Integer id);
+    T get(Integer id);
 
-    Room save(Room room);
+    T save(T modelObject);
 
     void delete(int id);
 
-    List<Room> listRooms();
+    List<T> listRooms();
 
 }
 

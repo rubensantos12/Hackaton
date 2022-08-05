@@ -13,5 +13,7 @@
     <!-- Base package to search for spring beans -->
     <context:component-scan base-package="org.canonymous.chat"/>
 
+    <import resource="persistence.xml"/>
+    <import resource="presentation.xml"/>
 
 </beans>

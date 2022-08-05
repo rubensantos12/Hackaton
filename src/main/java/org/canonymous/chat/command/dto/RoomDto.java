@@ -1,12 +1,9 @@
 package org.canonymous.chat.command.dto;
 
-import com.sun.istack.internal.NotNull;
-
 public class RoomDto {
 
     private int id;
 
-    @NotNull
     private String name;
 
     private final int capacity = 2;

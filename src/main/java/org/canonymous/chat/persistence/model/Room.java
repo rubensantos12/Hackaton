@@ -1,14 +1,17 @@
 package org.canonymous.chat.persistence.model;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "room")
-public class Room {
-    
-    private int id;
+public class Room extends AbstractModel{
+
+    @Id
+    @GeneratedValue
+    private Integer id;
 
     private String name;
 
@@ -18,8 +21,7 @@ public class Room {
         this.id = id;
     }
 
-    @Id
-    public Integer getId() {
+    public int getId() {
         return id;
     }
 
@@ -42,4 +44,17 @@ public class Room {
     public void setUserCount(int userCount) {
         this.userCount = userCount;
     }
+
+    @Override
+    public String toString() {
+
+        // printing recipients with lazy loading
+        // and no session will cause issues
+        return "Customer{" +
+                "roomName='" + name + '\'' +
+                ", id='" + id + '\'' +
+                ", userCount='" + userCount + '\'' +
+                "} " + super.toString();
+    }
+
 }

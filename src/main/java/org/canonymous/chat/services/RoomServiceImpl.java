@@ -3,10 +3,11 @@ package org.canonymous.chat.services;
 import org.canonymous.chat.persistence.dao.jpa.RoomDao;
 import org.canonymous.chat.persistence.model.Room;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
-
+@Service
 public class RoomServiceImpl implements RoomService{
 
     private RoomDao roomDao;
