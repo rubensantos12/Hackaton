@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Chat</title>
+	<link rel="stylesheet" type="text/css" href="/css/style.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="bootstrap" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" />
+	<script src="https://code.jquery.com/jquery-latest.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<div id='acess_user'>
+
+		<form id='login'>
+			<div id="welcome"><button type="submit" value="enter" id="enter-button">Press Here to Enter</button></div>
+		</form>
+	</div>
+	<div id='chat_box'>
+		<a href="http://192.168.1.7:5503/rooms.html" id="button"><button type="submit" class="btn btn-success">Leave
+				room</button></a>
+		<div id="message_history"></div>
+		<form id='chat'>
+			<input type='text' id='message_text' name='message_text' />
+			<input type='submit' value='send message' />
+		</form>
+	</div>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+	<script type="text/javascript">
+		var socket = io.connect();
+
+		function myFunction() {
+			var x = document.getElementById("chat_box");
+			console.log("IM HERE");
+			x.style.display = "block";
+		}
+
+		$("form#chat").submit(function (e) {
+			e.preventDefault();
+			var message = $(this).find("#message_text").val();
+			var user = $("#user_list").val();
+			socket.emit("send message", { msg: message, usu: user }, function () {
+				$("form#chat #message_text").val("");
+			});
+		});
+
+		socket.on("update message", function (data) {
+			var formated_message = $("<p />").text(data.msg).addClass(data.tipo);
+			$("#message_history").append(formated_message);
+		});
+
+		$("form#login").submit(function (e) {
+			myFunction();
+			e.preventDefault();
+			socket.emit("enter", $(this).find("#name").val(), function (valid) {
+				$("#acess_user").hide();
+				$("#chat").show();
+			});
+		});
+		socket.on("update users", function (users) {
+			$("#list_users").empty();
+			$("#list_users").append("<option value=''>Todos</option>");
+			$.each(users, function (indice) {
+				var user_option = $("<option />").text(users[indice]);
+				$("#list_users").append(user_option);
+			});
+		});
+	</script>
+</body>
+
+</html>

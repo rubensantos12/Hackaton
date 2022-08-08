@@ -1,0 +1,110 @@
+@font-face {
+    font-family: "Haies";
+    src: url(/FirstPage/HaiesleySansDemoItalic.ttf);
+}
+:root{
+    text-align: center;
+    
+    
+}
+body {
+    background: linear-gradient(-45deg, #D7785B, #9D6077, #3C5963, #91A5A1);
+    background-size: 400% 400%;
+    animation: gradient 5s ease infinite;
+    height: 100vh;
+}
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+.chat-title{
+    font-family: "Haies";
+    font-size:100px;
+    color: white;
+    
+}
+.outbox{
+    margin-left: 10%;
+    margin-right: 10%;
+    
+}
+
+.chat-box{
+    display: flex;
+    justify-content: center;
+    height: 630px;
+    width: 630px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid black;  
+    align-items: flex-end;
+    border-radius: 5%;
+    background-color: white;
+    border-top-right-radius: 0%;
+}  
+.flex-child{
+    
+    margin-bottom: 10px;
+}
+
+.send-button{
+    margin-left: 10px;
+    margin-top: 16px;
+}
+
+.flex-child:first-child{
+    margin-right: 10px;
+}
+
+#message{
+    width: 500px;
+}
+
+#banner{
+    
+    position: absolute;
+    transform: translateY(-569px);
+    height: 60px;
+    width: 627px;
+    background-image: linear-gradient(to right, rgba(187, 187, 187, 0), rgb(132, 132, 132));;
+    
+}
+
+.icon{
+transform: translateX(230px);
+margin-left: 60px;
+margin-top: 10px;
+}
+
+#video-icon{
+    margin-right: -50px;
+}
+
+
+#exit-button{
+    cursor: pointer;
+    
+}
+
+#info-box{
+    margin-top: 100px;
+    
+}
+
+#banner-title{
+    position: absolute;
+    font-family: "Haies";
+    font-size: 30px;
+    margin-top: 20px;
+    margin-left: 35px;
+}
+
+
+

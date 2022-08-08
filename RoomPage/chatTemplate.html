@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canonymous Chat</title>
+    <link rel="stylesheet" href="roomstyles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="bootstrap" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css    "/>
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://kit.fontawesome.com/acd3862f3e.js" crossorigin="anonymous"></script>
+<script src="chat.js" defer></script>
+
+<body>
+    <div id="info-box">
+   <h1 class="chat-title">Canonymous</h1>
+   <div class="outbox">
+    <div class="chat-box">
+        <div id="banner"> 
+           <div id="banner-title">Welcome to the chatroom</div>
+            <i class="fa-solid fa-video fa-3x icon "  id="video-icon"></i>
+            <span id="exit-button"><i class="fa-solid fa-xmark fa-3x icon "></i></span> 
+            
+            
+        
+        </div>
+        <div class="flex-child insert-message-box">
+        <form>
+            <label for="message"></label><br>
+            <input type="text" id="message" placeholder="Insert Message"><br>
+        </form>
+        </div>
+
+            <div class="flex-child send-button">
+            <button id="send" type="submit" class="btn btn-success">Send</button>
+            </div>  
+
+       
+    </div>
+</div>
+</div>
+</body>
+</html>

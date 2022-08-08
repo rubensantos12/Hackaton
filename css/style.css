@@ -1,0 +1,121 @@
+html, body{
+	font-family: Arial, Tahoma, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+body {
+    background: linear-gradient(-45deg, #D7785B, #9D6077, #3C5963, #91A5A1);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
+}
+
+form{
+	margin:15px 0;
+}
+
+form input[type='text']{
+	border:2px solid #000000;
+	border-radius: 5px;
+	margin-left: 203px;
+	margin-right: auto;
+	padding:5px;
+	width:50%;
+}
+
+form input[type='submit']{
+	background: #000000;
+	border:none;
+	border-radius: 5px;
+	color:#FFF;
+	cursor:pointer;
+	margin-left: auto;
+	margin-right: auto;
+	font-weight: bold;
+	padding:7px 5px;
+	width:19%;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+#message_history, #user_list{
+	background: rgb(255, 255, 255);
+	border:2px solid #292928;
+	height: 550px;
+	margin-top:10%;
+	margin-left:auto;
+	margin-right: auto;
+	margin-bottom: 10px;
+	width:70%;
+	overflow: auto;
+}
+
+#chat_box{
+	display: none;
+}
+
+
+
+#acess_user{
+	position: absolute;
+	transform: translateY(500px);
+	margin-left: 700px;
+	width:120px;
+	height: 200px;
+	
+}
+#acess_user form{
+	margin:0;
+}
+
+#message_history{
+	border-right: 0;
+}
+
+
+#message_history .system{
+	background-color:gray	;
+	color: #FFF;
+	font-weight: bold;
+}
+
+#enter{
+	position: absolute;
+	align-self:center;
+}
+#button{
+	position: absolute;
+	transform: translateY(-40px);
+	margin-left: 1532px;
+	margin-right: auto;
+	
+	
+}
+
+#welcome{
+	position: absolute;
+	transform: translateY(-300px);
+	margin-left: 100px;
+	font-size: 100px;
+	color:white;
+
+}
+
+#enter-button{
+	border-radius: 10%;
+	background-color: rgba(0,0,0,0);
+}
+
+#chat{
+	margin-left: 100px;
+}

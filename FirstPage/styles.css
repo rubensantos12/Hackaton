@@ -1,0 +1,127 @@
+@font-face {
+    font-family: "Haies";
+    src: url(HaiesleySansDemoItalic.ttf);
+}
+
+.homepage_title {
+
+    text-align: center;
+    color: white;
+    font-size: 45px;
+    font-family: "Haies";
+    margin-top: -60px;
+    transform: translateY(70px);
+
+}
+
+.title_appeal {
+
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    font-family: "Haies";
+    margin-top: 80px;
+    transform: translateY(40px);
+
+
+}
+
+
+.door-container {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
+    width: 280px;
+    height: 500px;
+    
+}
+
+#door {
+    height: 550px;
+    width: 550px;
+}
+
+
+body {
+    background: linear-gradient(-45deg, #d7785b, #9d6077, #3c5963, #91a5a1);
+    background-size: 400% 400%;
+    animation: gradient 3s ease infinite;
+    height: 100vh;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+ 
+    50% {
+        background-position: 100% 50%;
+    }
+ 
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* BOXES */
+
+
+.h5 {
+    color: white;
+    font-family: "Haies";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 50px;
+    line-height: 0.2;
+}
+
+.mb-0 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    font-size: 20px;
+    margin-bottom: 0 !important;
+}
+
+.invisible_button {
+    
+    position:fixed;
+    transform: translateY(275px);
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    color: transparent;
+    background-color: transparent;
+    border-color: transparent;
+    cursor: default;
+
+    display: flex;
+
+    margin-right: auto;
+    margin-top: -550px;
+
+    width: 300px;
+    height: 500px;
+    
+
+}
+
+.homepage {
+    
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+    font-size: 40px;
+}
+
