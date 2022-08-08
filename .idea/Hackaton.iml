@@ -18,6 +18,7 @@
         <setting name="provider-name" value="Hibernate" />
         <datasource-mapping>
           <factory-entry name="Hackaton" />
+          <factory-entry name="emFactory" />
         </datasource-mapping>
         <naming-strategy-map />
       </configuration>
